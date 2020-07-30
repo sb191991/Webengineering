@@ -1,0 +1,196 @@
+/* global styles
+ -------------------------------------------*/
+
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+h1, h2{
+    margin: 0px;
+}
+
+button{
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightgray;
+}
+
+button:hover{
+    background-color: darkgray;
+}
+
+ul{
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* box sizing fix */
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* header & footer styles
+ -------------------------------------------*/
+
+header, footer{
+    background-color: #444;
+    color: white;
+}
+
+/* header */
+header {
+    padding: 20px 20px 0px 20px;
+}
+
+.active{
+    text-decoration: underline;
+}
+
+nav{
+    margin-top: 5px;
+}
+
+nav a{
+    background-color: green;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block; /* allows width, height */
+    color: white;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a:hover{
+    color: darkgray;
+}
+
+/* footer */
+footer{
+    font-size: 0.8rem; /* font size relative to the root element */
+    padding: 10px 20px 10px 20px;
+}
+
+
+/* main content
+ -------------------------------------------*/
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main section{
+    order: 1;
+}
+
+main aside{
+    order: 2;
+    margin-left: 20px;
+}
+
+/* index page */
+.index-content section{
+    flex-grow: 2;
+}
+
+.index-content aside{
+    flex-grow: 1;
+}
+
+.search-form{
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search-form * {
+    height: 20px;
+    line-height: 20px;
+}
+
+.stop-input{
+    flex-grow: 2;
+    margin-right: 5px;
+}
+
+.stop-btn{
+    flex-grow: 1;
+}
+
+#result {
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+
+/* stop page */
+.stop-content aside{
+    height: 400px;
+    flex-grow: 4;
+}
+
+#map{
+    height: 400px;
+}
+
+.stop-content section{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stopentry{
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 1px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.stop-caption{
+    flex-grow: 9;
+}
+
+.stopentry:hover{
+    background-color: green;
+}
+
+
+/* media queries
+ -------------------------------------------*/
+
+@media(max-width: 900px){
+    main{
+        flex-direction: column;
+    }
+
+    main aside {
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+        order: 0;
+    }
+
+    main section{
+        width: 100%;
+    }
+
+    .search-form * {
+        width: 100%;
+        margin: 0px 0px 5px 0px;
+    }
+}
